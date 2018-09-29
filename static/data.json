@@ -4,6 +4,12 @@
         "size":"20ml",
         "price":"1270",
         "vipPrice":"1080",
+        "picList":[
+            "https://wx1.sinaimg.cn/mw690/7ec45ea1gy1fvo3jyaopsj20ly0nbgot.jpg",
+            "https://wx2.sinaimg.cn/mw690/7ec45ea1gy1fvo3jycsu8j20ly0lcgp3.jpg",
+            "https://wx2.sinaimg.cn/mw690/7ec45ea1gy1fvo3jycjvyj20ly0m6tc2.jpg",
+            "https://wx2.sinaimg.cn/mw690/7ec45ea1gy1fvo3jy9yxoj20ly0ligoh.jpg"
+        ],
         "pic1":"https://wx1.sinaimg.cn/mw690/7ec45ea1gy1fvo3jyaopsj20ly0nbgot.jpg",
         "pic2":"https://wx2.sinaimg.cn/mw690/7ec45ea1gy1fvo3jycsu8j20ly0lcgp3.jpg",
         "pic3":"https://wx2.sinaimg.cn/mw690/7ec45ea1gy1fvo3jycjvyj20ly0m6tc2.jpg",

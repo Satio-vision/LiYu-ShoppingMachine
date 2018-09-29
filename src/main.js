@@ -11,6 +11,9 @@ Vue.prototype.$http = axios
 
 Vue.config.productionTip = false
 
+var VueTouch = require('vue-touch')
+Vue.use(VueTouch, {name: 'v-touch'})
+
 /* eslint-disable no-new */
 new Vue({
   el: '#app',

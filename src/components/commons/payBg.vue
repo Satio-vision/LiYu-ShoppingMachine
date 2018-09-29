@@ -25,6 +25,7 @@ export default {
   bottom: 0px;
   left: 0px;
   right: 0px;
+  z-index: 10;
   #bg {
     position: absolute;
     width: 100%;

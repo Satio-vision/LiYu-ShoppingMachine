@@ -61,6 +61,7 @@ export default {
     height: 277px;
     margin: 0 auto;
     margin-top: 127px;
+    z-index: 5;
   .member {
     float: left;
     height: 100%;

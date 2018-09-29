@@ -42,7 +42,7 @@ export default {
         // this.initWebSocket()
         setTimeout(() => {
             this.$store.dispatch('getMemberPayRes');
-        },3000)
+        },90000)
     },
     watch:{
         '$route'(to,from){

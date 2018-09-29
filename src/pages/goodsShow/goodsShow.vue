@@ -8,16 +8,24 @@
     </div>
     <!-- 图片盒子 -->
     <div id="picBox">
+      <v-touch 
+      tag="div" 
+      v-on:swipeleft = "move($event),picListChange(way[0])" 
+      class="picBoxShow_shade"
+      :class="{fly : isMove}">
+      </v-touch>
+      <!-- <div id="picBoxShow_shade"></div> -->
       <div id="picBox1">
         <div id="picBoxShow">
           <div id="bigPic">
-            <img  :src="goodInfo.pic1">
-            <i id="details">点击查看详情</i>
+            <!-- preventDefault($event) 阻止拖动图片 -->
+            <img  :src="goodInfo.pic1" @mousedown= "preventDefault($event)">
+            <!-- <i id="details">点击查看详情</i> -->
           </div>
           <div id="smallPicBox">
-            <img :src="goodInfo.pic2" alt="">
-            <img :src="goodInfo.pic3" alt="">
-            <img :src="goodInfo.pic4" alt="">
+            <img :src="picList[1]" alt="" @mousedown= "preventDefault($event)">
+            <img :src="picList[2]" alt="" @mousedown= "preventDefault($event)">
+            <img :src="picList[3]" alt="" @mousedown= "preventDefault($event)">
           </div>
         </div>
         <p id="introduce">{{ goodInfo.introduce}}</p>
@@ -75,7 +83,10 @@ export default {
   data () {
     return {
       goodName: this.$route.query.name,
-      goodInfo:{}
+      goodInfo:{},
+      picList:[],
+      isMove:false,
+      way:['left','right']
     }
   },
   methods:{
@@ -84,12 +95,42 @@ export default {
       }).then(res => {
           // console.log('res',res.data.goodInfo);
           this.goodInfo = res.data.goodInfo;
-          console.log(this.goodInfo)
+          // console.log(this.goodInfo);
+          this.picList = res.data.goodInfo.picList;
+          // console.log('this.picList',this.picList);
       })
     },
      beMember() {
       this.$router.push({ name: "member" });
     },
+    picListChange(way){
+      if(way == "left"){
+        for(var i=1;i<this.picList.length;i++){
+          var a = this.picList[i-1];
+          this.picList[i-1] = this.picList[i];
+          this.picList[i] = a;
+        }
+        this.goodInfo.pic1 = this.picList[0];
+        // console.log(this.picList)
+      }else{
+      }
+    },
+    move(e){
+      let el = e.target;// 获取目标元素
+      // console.log(el);
+      el.style.opacity = "1"
+      this.isMove = true
+      setTimeout(() => {
+        el.style.opacity = "0";
+      },1000)
+      setTimeout(() => {
+        this.isMove = false;
+      },1100);
+    },
+    preventDefault(e){
+      //阻止拖动图片
+      e.preventDefault();
+    }
   },
   created(){
     // console.log('aa',this.goodName)
@@ -137,6 +178,22 @@ export default {
     position: absolute;
     left:63px;
     bottom:74px;
+    // position: relative;
+    .picBoxShow_shade{
+      width: 100%;
+      height: 100%;
+      transform: rotate(0deg);
+      background: #F7F7F7;
+      box-shadow: 0 8px 16px 0 rgba(0,0,0,0.20);
+      position: absolute;
+      z-index: 10;
+      opacity: 0;
+      transition: opacity 1s;
+    }
+    .fly{
+      transition: transform 1s;
+      transform: translateX(-950px) translateY(-470px) rotate(-23deg);
+    }
     #picBox1{
       width: 100%;
       height: 100%;
@@ -145,10 +202,11 @@ export default {
       box-shadow: 0 8px 16px 0 rgba(0,0,0,0.20);
       #picBoxShow{
         width: 760px;
-        height: 570px; 
+        height: 570px;
+        padding: 10px;
         #bigPic{
           float:left;
-          width: 570px;
+          width: 550px;
           height: 570px;
           position: relative;
           img{

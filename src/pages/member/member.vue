@@ -69,7 +69,7 @@ export default {
     top: 136px;
     left: 310px;
     background: url("../../assets/pay/bg_VIP.png");
-    z-index: 2;
+    z-index: 11;
     #closeBtn {
     position: absolute;
     top: 40px;
