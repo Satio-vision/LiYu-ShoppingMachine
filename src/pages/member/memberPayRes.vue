@@ -56,7 +56,7 @@ export default {
     top: 136px;
     left: 310px;
     background: url("../../assets/pay/bg_VIP.png");
-    z-index: 2;
+    z-index: 12;
     // 标题盒子
     #titleBox {
       position: absolute;

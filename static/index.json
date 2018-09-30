@@ -1,0 +1,18 @@
+[
+    {
+        "name":"很厉害的眼镜",
+        "pic":"../src/assets/home/goods/01.png"
+    },
+    {
+        "name":"我也不知道这是什么",
+        "pic":"https://wx2.sinaimg.cn/mw690/7ec45ea1gy1fvrjqq67ztj202302yq37.jpg"
+    },
+    {
+        "name":"这个也不知道是什么",
+        "pic":"https://wx1.sinaimg.cn/mw690/7ec45ea1gy1fvrjqq5t5xj202a022q32.jpg"
+    },
+    {
+        "name":"这个是CHANLE香水",
+        "pic":"../src/assets/home/goods/04.png"
+    }
+]
