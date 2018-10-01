@@ -29,7 +29,7 @@
             <div class="goodsBlock" id="goodsBlock2_4">
                <img src="../../assets/home/goods/06.png">
               <p>这个是CHANLE香水</p>
-            </div>
+            </div> 
           </div>
           <!-- <div class="rotundity" id="rotundity3">
             <div class="goodsBlock" id="goodsBlock3_1"></div>
