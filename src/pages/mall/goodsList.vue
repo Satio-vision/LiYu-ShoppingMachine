@@ -40,7 +40,7 @@ import Store from '../../store'
 export default {
   
   name: 'AppGoodsList',
-  
+
   data () {
     return {
       name: this.$route.query.name,
