@@ -56,6 +56,9 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="scss">
+.app-mall{
+  position: relative;
+}
   #welcome{
     position: absolute;
     top: 32px;
@@ -72,6 +75,7 @@ export default {
     margin-bottom: 0px;
     li{
       // float:left;
+      flex:1;
       list-style: none;
       display: inline-block;
       height: 56px;

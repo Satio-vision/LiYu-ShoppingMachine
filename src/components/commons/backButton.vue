@@ -11,7 +11,7 @@ export default {
   name: 'back-button',
   data () {
     return {
-      msg: ''
+      
     }
   },
   methods:{

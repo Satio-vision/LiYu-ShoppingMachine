@@ -8,8 +8,8 @@
             <span>扫码支付</span>
             <div id="titleLine"></div>
         </div>
-        <img :src="goodInfo.pic1" class="Pic" id="goodPic">
-        <img :src="QRCode" class="Pic" id="QRCode">
+        <img  v-lazy="goodInfo.pic1" :src="goodInfo.pic1" class="Pic" id="goodPic">
+        <img  v-lazy="QRCode" :src="QRCode" class="Pic" id="QRCode">
         <!-- 会员按钮 -->
         <div id="vipBtn">
             <span @click="beMember()">点我成为会员</span>

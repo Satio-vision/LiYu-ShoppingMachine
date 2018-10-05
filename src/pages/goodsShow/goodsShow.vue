@@ -19,13 +19,13 @@
         <div id="picBoxShow">
           <div id="bigPic">
             <!-- preventDefault($event) 阻止拖动图片 -->
-            <img  :src="goodInfo.pic1" @mousedown= "preventDefault($event)">
+            <img  v-lazy =" goodInfo.pic1" :src="goodInfo.pic1" @mousedown= "preventDefault($event)">
             <!-- <i id="details">点击查看详情</i> -->
           </div>
           <div id="smallPicBox">
-            <img :src="picList[1]" alt="" @mousedown= "preventDefault($event)">
-            <img :src="picList[2]" alt="" @mousedown= "preventDefault($event)">
-            <img :src="picList[3]" alt="" @mousedown= "preventDefault($event)">
+            <img v-lazy ="picList[1] " :src="picList[1]" alt="" @mousedown= "preventDefault($event)">
+            <img v-lazy =" picList[2]" :src="picList[2]" alt="" @mousedown= "preventDefault($event)">
+            <img v-lazy ="picList[3] " :src="picList[3]" alt="" @mousedown= "preventDefault($event)">
           </div>
         </div>
         <p id="introduce">{{ goodInfo.introduce}}</p>

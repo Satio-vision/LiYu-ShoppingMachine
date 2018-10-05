@@ -12,7 +12,7 @@
               <p>好像很厉害的眼镜</p>
             </div>
             <div class="goodsBlock" id="goodsBlock1_3">
-              <img src="../../assets/home/goods/02.png" alt="">
+              <img src="../../assets/home/goods/02.png">
               <p>不知道这个是什么鬼</p> 
             </div>
           </div>

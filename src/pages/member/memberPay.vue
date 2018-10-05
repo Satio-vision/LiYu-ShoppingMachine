@@ -1,7 +1,7 @@
 <template>
     <div class="memberPay">
         <div id="box-center" class="_box">
-            <img :src="ChosedCode">
+            <img  v-lazy="ChosedCode" :src="ChosedCode">
         </div>
         <div id="box-right" class="_box">
             <div id="weChat" @click="changePayWay()">

@@ -9,6 +9,7 @@ import payRes from '@/pages/goodsShow/payRes'
 import member from '@/pages/member/member'
 import memberPay from '@/pages/member/memberPay'
 import memberPayRes from '@/pages/member/memberPayRes'
+import notFound from '@/pages/notFound/notFound'
 Vue.use(Router)
 
 export default new Router({
@@ -69,6 +70,11 @@ export default new Router({
           component:memberPayRes
         }
       ]
+    },
+    {
+      path:'/*',
+      name:'notFound',
+      component:notFound,
     }
   ]
 })
