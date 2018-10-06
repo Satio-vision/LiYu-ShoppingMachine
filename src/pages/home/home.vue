@@ -8,16 +8,19 @@
       <button id="toMall" @click="goToMall">
         商城列表
       </button>
-      <app-home-goodsStar></app-home-goodsStar>
+      <!-- <app-home-goodsStar></app-home-goodsStar> -->
+      <goods-star2></goods-star2>
     </div>
 </template>
 
 <script>
 import AppHomeGoodsStar from './goodsStar'
+import GoodsStar2 from './goodsStar2'
 export default {
   name: 'AppHome',
   components:{
-    AppHomeGoodsStar
+    AppHomeGoodsStar,
+    GoodsStar2
   },
   data () {
     return {

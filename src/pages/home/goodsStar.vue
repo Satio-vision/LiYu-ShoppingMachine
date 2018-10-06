@@ -81,7 +81,7 @@ export default {
         width: 200px;
         height: 250px;
         // background: #ccc;
-        position: absolute;
+        // position: absolute;
         img{
             width: auto;
             height: auto;
